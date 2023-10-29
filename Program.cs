@@ -13,6 +13,8 @@ builder.Services.AddControllersWithViews();
 
 
 var services = builder.Services;
+
+services.AddRazorPages();
 services.AddDbContext<TourContext>(options =>
 {
     string url = builder.Configuration.GetConnectionString("TourContext");
@@ -54,6 +56,12 @@ services.Configure<IdentityOptions>(options => {
 
 });
 
+<<<<<<< HEAD
+=======
+
+
+services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<TourContext>().AddDefaultTokenProviders();
+>>>>>>> 65cc4e11405f530c4abb16acba7d152669480f18
 
 var app = builder.Build();
 
@@ -70,13 +78,23 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+<<<<<<< HEAD
 app.UseAuthentication(); //xac thuc danh tinh
 
 app.UseAuthorization(); // sau khi xac thuc , thi dc lam gi
+=======
+
+app.UseAuthentication();
+app.UseAuthorization();
+>>>>>>> 65cc4e11405f530c4abb16acba7d152669480f18
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+<<<<<<< HEAD
 app.MapRazorPages();
+=======
+
+>>>>>>> 65cc4e11405f530c4abb16acba7d152669480f18
 app.Run();

@@ -11,7 +11,11 @@
         <a id="manage" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @UserManager.GetUserName(User)!</a>
     </li>
     <li class="nav-item">
+<<<<<<< HEAD
         <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index", new { area = "" })">
+=======
+        <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+>>>>>>> 65cc4e11405f530c4abb16acba7d152669480f18
             <button id="logout" type="submit" class="nav-link btn btn-link text-dark">Logout</button>
         </form>
     </li>

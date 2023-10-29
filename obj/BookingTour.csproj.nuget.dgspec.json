@@ -89,9 +89,15 @@
               "target": "Package",
               "version": "[6.0.16, )"
             },
+<<<<<<< HEAD
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.5, )"
+=======
+            "X.PagedList.Mvc.Core": {
+              "target": "Package",
+              "version": "[8.4.7, )"
+>>>>>>> 65cc4e11405f530c4abb16acba7d152669480f18
             }
           },
           "imports": [
